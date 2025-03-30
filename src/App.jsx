@@ -1,25 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import Navbar from './components/Navbar'
+import ItemListContainer from './components/ItemListContainer'
+import Button from './examples/Button'
+  
 function App() {
- 
-  const [count, setCount]=useState(0);
 
-  const handleClick=()=>{
-    setCount(count +1);
-  }
+//const nombre = 'Laura'
+
+//const saludar = () => {
+//  alert('Holis')
+//}
+//const login = () => {
+ //   console.log('holaaaaa')
+//}
 
   return (
     <>
-    <section className='container'>
-      <h1>Contador {count}</h1>
-      <button onClick={handleClick}>+</button>
-    </section>  
-      
+    <Navbar/> 
+    <ItemListContainer greeting='Bienvenidos a mi App 😊'/>
+
+    {/*<Button text='Hola Coders' style='button-purple' handler={saludar}/>
+    <Button text='Log In' style='button-gray' handler={login}/>*/}
     </>
-  )
-}
+    )
+  }
 
 export default App
